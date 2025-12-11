@@ -1,0 +1,14 @@
+
+<!DOCTYPE html><html><body>
+<h2>Secure PRNG</h2>
+<div id="out">Loading…</div>
+<script>
+async function tick(){
+  const r = await fetch('/result');
+  const j = await r.json();
+  document.getElementById('out').innerHTML = "Digit: "+j.digit;
+}
+setInterval(tick, 1000);
+tick();
+</script>
+</body></html>
